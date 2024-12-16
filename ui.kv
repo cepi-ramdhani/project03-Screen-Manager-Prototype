@@ -1,0 +1,101 @@
+<Layar1>:
+    orientation: "vertical"
+
+   
+
+    MDLabel:
+        text: "Content"
+        halign: "center"
+
+    MDFillRoundFlatIconButton:
+        text:"Diagnose"
+        pos_hint:{"center_x": 0.3,"center_y":0.25}
+        on_release: root.manager.current = "demo1"  
+        icon: "play"
+        text_color:"white"
+        font_size:"15sp"
+        
+
+    MDFillRoundFlatIconButton:
+        text:" Setting  "
+        pos_hint:{"center_x": 0.7, "center_y":0.25}
+        icon: "cog"
+        text_color:"white"
+        font_size:"15sp"    
+    
+    Image:
+        source: "letter.png"
+        size_hint:(0.7,0.7)
+        pos_hint:{"center_x": 0.5,"center_y":0.8}
+
+    Image:
+        source: "cover.png"
+        size_hint:(0.7,0.7)
+        pos_hint:{"center_x": 0.5,"center_y":0.53}
+
+<Demo1>:
+    
+    MDTextField:
+        hint_text: "Apa Keluhan Utama Anda ?"
+        helper_text: "Keluhan utama"
+        helper_text_mode: "on_focus"
+        icon_right: "python"
+        icon_right_color: app.theme_cls.primary_color
+        pos_hint:{'center_x': 0.5, 'center_y': 0.5}
+        size_hint_x:None
+        width:300    
+
+    MDFillRoundFlatButton:
+        text:" Ok  "
+        pos_hint:{"center_x": 0.5, "center_y":0.4}
+        on_release: root.manager.current = "demo2"  
+        text_color:"white"
+        font_size:"15sp"    
+
+<Demo2>:
+    
+    MDFillRoundFlatButton:
+        text:" Sakit kepala sebelah  "
+        pos_hint:{"center_x": 0.5, "center_y":0.3}
+        text_color:"white"
+        font_size:"15sp"   
+
+    MDFillRoundFlatButton:
+        text:" Sakit kepala terasa diikat "
+        pos_hint:{"center_x": 0.5, "center_y":0.4}
+        on_release: root.manager.current = "demo3"  
+        text_color:"white"
+        font_size:"15sp"     
+          
+    MDFillRoundFlatButton:
+        text:" Sakit kepala di bagian belakang  "
+        pos_hint:{"center_x": 0.5, "center_y":0.5} 
+        text_color:"white"
+        font_size:"15sp"     
+
+    Image:
+        source: "headache.jpg"
+        size_hint:(0.7,0.7)
+        pos_hint:{"center_x": 0.5,"center_y":0.7}    
+
+<Demo3>:
+    
+    MDLabel:
+        text: "Berdasarkan keluhan anda anda mengalami gejala tension type headache silakan hubungi dokter anda untuk mendapatkan perawatan"
+        pos_hint:{"center_x": 0.5,"center_y":0.9}  
+
+    MDLabel:
+        text: "Diagnosis Banding :"
+        pos_hint:{"center_x": 0.5,"center_y":0.8}  
+
+    MDRectangleFlatButton:
+        text: "Migraine"   
+        pos_hint:{"center_x": 0.5,"center_y":0.7} 
+
+    MDRectangleFlatButton:
+        text: "Nyeri Kepala Sekunder"   
+        pos_hint:{"center_x": 0.5,"center_y":0.6} 
+
+    MDRectangleFlatButton:
+        text: "Medication Overuse Headache"   
+        pos_hint:{"center_x": 0.5,"center_y":0.5}           
